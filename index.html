@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAT Manager V2</title>
+  <meta name="description" content="CAT Manager V2 - Trang thông tin và chính sách sử dụng" />
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #17202a;
+      --muted: #5b6673;
+      --line: #d9e1ea;
+      --primary: #0f4c81;
+      --primary-2: #0b3559;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: #fff;
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 14px 36px rgba(15, 76, 129, 0.22);
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+    }
+    .hero p {
+      margin: 8px 0;
+      color: rgba(255,255,255,0.92);
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .badge {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.22);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0 24px;
+    }
+    .nav a {
+      text-decoration: none;
+      color: var(--primary);
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 20px rgba(16, 24, 40, 0.05);
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 24px;
+      color: var(--primary-2);
+    }
+    h3 {
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+    p, li {
+      color: var(--text);
+    }
+    .muted {
+      color: var(--muted);
+    }
+    ul { padding-left: 20px; }
+    .section { margin-bottom: 20px; }
+    .lang {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      background: #eef5fb;
+      border: 1px solid #d6e6f3;
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin-bottom: 10px;
+    }
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 20px 0 36px;
+      font-size: 14px;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .table th, .table td {
+      border: 1px solid var(--line);
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .table th {
+      background: #f0f5fa;
+      width: 220px;
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>CAT Manager V2</h1>
+      <p>Ứng dụng hỗ trợ quản trị các trang mạng xã hội của Công an tỉnh Thanh Hóa và các đơn vị thuộc phạm vi quản lý của Công an tỉnh Thanh Hóa.</p>
+      <p>Application supporting social media page management for Thanh Hoa Department of Public Security and units under its management.</p>
+      <div class="badge-row">
+        <div class="badge">Nội bộ / Internal Use</div>
+        <div class="badge">Quản lý bài đăng / Post Management</div>
+        <div class="badge">Phê duyệt nội dung / Content Approval</div>
+        <div class="badge">Chat 1-1 / One-to-One Chat</div>
+      </div>
+    </section>
+
+    <nav class="nav">
+      <a href="#about">Giới thiệu</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms of Use</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+
+    <div class="grid" id="about">
+      <section class="card">
+        <div class="lang">Tiếng Việt</div>
+        <h2>Giới thiệu</h2>
+        <p>CAT Manager V2 là ứng dụng phục vụ quản trị các trang mạng xã hội của Công an tỉnh Thanh Hóa và các đơn vị thuộc phạm vi quản lý của Công an tỉnh Thanh Hóa, hỗ trợ quản lý bài đăng, lịch đăng, phê duyệt nội dung, trao đổi qua chat và theo dõi hiệu quả vận hành.</p>
+        <table class="table">
+          <tr><th>Đơn vị vận hành</th><td>Công an tỉnh Thanh Hóa</td></tr>
+          <tr><th>Tên pháp lý</th><td>THANH HOA DEPARTMENT OF PUBLIC SECURITY</td></tr>
+          <tr><th>Địa chỉ</th><td>15A Hạc Thành, phường Ba Đình, Thanh Hóa, Việt Nam</td></tr>
+          <tr><th>Điện thoại</th><td>+84 237 3852697</td></tr>
+          <tr><th>Website</th><td>https://www.conganthanhhoa.gov.vn/</td></tr>
+        </table>
+      </section>
+
+      <section class="card">
+        <div class="lang">English</div>
+        <h2>About</h2>
+        <p>CAT Manager V2 is an internal application supporting social media page management for Thanh Hoa Department of Public Security and units under its management, including post scheduling, content approval, one-to-one chat, and page performance tracking.</p>
+        <table class="table">
+          <tr><th>Operating Authority</th><td>Thanh Hoa Department of Public Security</td></tr>
+          <tr><th>Legal Name</th><td>THANH HOA DEPARTMENT OF PUBLIC SECURITY</td></tr>
+          <tr><th>Address</th><td>15A Hac Thanh, Ba Dinh Ward, Thanh Hoa, Vietnam</td></tr>
+          <tr><th>Phone</th><td>+84 237 3852697</td></tr>
+          <tr><th>Website</th><td>https://www.conganthanhhoa.gov.vn/</td></tr>
+        </table>
+      </section>
+    </div>
+
+    <section class="card section" id="privacy">
+      <h2>Chính sách quyền riêng tư / Privacy Policy</h2>
+
+      <div class="lang">Tiếng Việt</div>
+      <h3>1. Phạm vi áp dụng</h3>
+      <p>Chính sách này áp dụng đối với dữ liệu được xử lý khi người dùng sử dụng CAT Manager V2 trên các nền tảng do Công an tỉnh Thanh Hóa triển khai, quản lý hoặc cho phép sử dụng trong phạm vi hoạt động của mình.</p>
+      <h3>2. Dữ liệu được xử lý</h3>
+      <ul>
+        <li>Họ tên, tên đăng nhập, số điện thoại, email, ảnh đại diện, địa chỉ</li>
+        <li>Nội dung chat, nội dung bài đăng, dự thảo, lịch đăng</li>
+        <li>Tệp đính kèm dạng ảnh hoặc video</li>
+        <li>Cookie, session token hoặc thông tin phiên đăng nhập</li>
+        <li>Dữ liệu vị trí GPS khi sử dụng tính năng liên quan</li>
+        <li>Dữ liệu kỹ thuật cần thiết để xác thực, phân quyền, vận hành, bảo mật và thống kê</li>
+      </ul>
+      <h3>3. Mục đích xử lý</h3>
+      <ul>
+        <li>Xác thực đăng nhập bằng tài khoản nội bộ</li>
+        <li>Phân quyền theo đơn vị hoặc cấp quản trị</li>
+        <li>Quản lý bài đăng, lịch đăng và quy trình phê duyệt</li>
+        <li>Hỗ trợ trao đổi nội bộ qua chat</li>
+        <li>Bảo đảm an toàn hệ thống, hỗ trợ kiểm tra và truy vết kỹ thuật khi cần</li>
+        <li>Thống kê, đánh giá hiệu quả vận hành và insight của trang</li>
+      </ul>
+      <h3>4. Chia sẻ dữ liệu</h3>
+      <p>CAT Manager V2 không sử dụng bên thứ ba để khai thác hoặc chia sẻ dữ liệu người dùng cho mục đích thương mại. Dữ liệu chỉ được cung cấp cho đơn vị, bộ phận hoặc người có thẩm quyền, hoặc theo yêu cầu hợp pháp của cơ quan nhà nước có thẩm quyền.</p>
+      <h3>5. Lưu trữ và bảo mật</h3>
+      <p>Chúng tôi áp dụng các biện pháp quản lý và kỹ thuật phù hợp để bảo vệ dữ liệu khỏi truy cập trái phép, mất mát, tiết lộ hoặc sử dụng sai mục đích. Người dùng có trách nhiệm bảo mật tài khoản được cấp.</p>
+      <h3>6. Liên hệ</h3>
+      <p>Email hỗ trợ tạm thời: <strong>daoduyanh.tin47@gmail.com</strong>. Kênh hỗ trợ: <strong>Fanpage Công an tỉnh Thanh Hóa</strong>. Hỗ trợ <strong>24/7</strong>.</p>
+
+      <hr style="border:none;border-top:1px solid var(--line);margin:24px 0;">
+
+      <div class="lang">English</div>
+      <h3>1. Scope</h3>
+      <p>This Policy applies to data processed when users access and use CAT Manager V2 on platforms deployed, managed, or authorized by Thanh Hoa Department of Public Security within its operational scope.</p>
+      <h3>2. Data Processed</h3>
+      <ul>
+        <li>Full name, username, phone number, email, profile picture, address</li>
+        <li>Chat content, post content, drafts, and posting schedules</li>
+        <li>Attachments in image or video format</li>
+        <li>Cookies, session tokens, or session-related login information</li>
+        <li>GPS location data when relevant features are used</li>
+        <li>Technical data necessary for authentication, authorization, operation, security, and statistics</li>
+      </ul>
+      <h3>3. Purposes of Processing</h3>
+      <ul>
+        <li>Authenticating access through internal accounts</li>
+        <li>Assigning permissions by unit or management level</li>
+        <li>Managing posts, schedules, and approval workflows</li>
+        <li>Supporting internal communication through chat features</li>
+        <li>Ensuring system security and enabling technical inspection when necessary</li>
+        <li>Producing statistics, operational evaluation, and page insights</li>
+      </ul>
+      <h3>4. Data Sharing</h3>
+      <p>CAT Manager V2 does not use third parties to commercially exploit or share user data. Data may only be disclosed to authorized units, departments, administrators, or competent authorities as required by law.</p>
+      <h3>5. Storage and Security</h3>
+      <p>We apply appropriate managerial and technical measures to protect data against unauthorized access, loss, disclosure, or misuse. Users are responsible for protecting their assigned accounts.</p>
+      <h3>6. Contact</h3>
+      <p>Temporary support email: <strong>daoduyanh.tin47@gmail.com</strong>. Support channel: <strong>Thanh Hoa Department of Public Security fanpage</strong>. <strong>24/7</strong> support.</p>
+    </section>
+
+    <section class="card section" id="terms">
+      <h2>Điều khoản sử dụng / Terms of Use</h2>
+
+      <div class="lang">Tiếng Việt</div>
+      <h3>1. Đối tượng sử dụng</h3>
+      <p>Ứng dụng chỉ dành cho người dùng được cấp tài khoản nội bộ hợp lệ bởi Công an tỉnh Thanh Hóa hoặc đơn vị có thẩm quyền thuộc phạm vi quản lý của Công an tỉnh Thanh Hóa. Ứng dụng không phải là nền tảng đăng ký công khai.</p>
+      <h3>2. Quy tắc sử dụng</h3>
+      <ul>
+        <li>Sử dụng đúng tài khoản được cấp và bảo mật thông tin đăng nhập</li>
+        <li>Chỉ thao tác trong phạm vi quyền được phân</li>
+        <li>Không đăng tải, gửi hoặc phát tán nội dung trái pháp luật, sai sự thật hoặc xâm phạm quyền, lợi ích hợp pháp của tổ chức, cá nhân khác</li>
+        <li>Không can thiệp, phá hoại, khai thác trái phép hoặc làm gián đoạn hệ thống</li>
+      </ul>
+      <h3>3. Nội dung và phê duyệt</h3>
+      <p>Ứng dụng hỗ trợ quản lý bài đăng, dự thảo, lịch đăng và quy trình phê duyệt nội dung. Chỉ người có thẩm quyền theo cấu hình hệ thống mới được thực hiện thao tác phê duyệt hoặc xử lý liên quan.</p>
+      <h3>4. Quản lý tài khoản</h3>
+      <p>Tài khoản do đơn vị quản trị có thẩm quyền tạo, khóa, điều chỉnh hoặc chấm dứt theo nhu cầu vận hành. Người dùng không có cơ chế tự xóa tài khoản trên ứng dụng.</p>
+      <h3>5. Giới hạn trách nhiệm</h3>
+      <p>Đơn vị vận hành không chịu trách nhiệm đối với gián đoạn, chậm trễ hoặc lỗi phát sinh từ sự cố kỹ thuật, hạ tầng mạng, nền tảng ngoài phạm vi kiểm soát hợp lý hoặc hành vi trái phép của người dùng.</p>
+
+      <hr style="border:none;border-top:1px solid var(--line);margin:24px 0;">
+
+      <div class="lang">English</div>
+      <h3>1. Eligible Users</h3>
+      <p>The application is intended only for users granted valid internal accounts by Thanh Hoa Department of Public Security or authorized units under its management. It is not a public open-registration platform.</p>
+      <h3>2. Rules of Use</h3>
+      <ul>
+        <li>Use only the assigned account and keep login credentials secure</li>
+        <li>Act only within granted permissions</li>
+        <li>Do not post, send, or distribute unlawful, false, or rights-infringing content</li>
+        <li>Do not interfere with, damage, exploit, or disrupt the system without authorization</li>
+      </ul>
+      <h3>3. Content and Approval</h3>
+      <p>The application supports management of posts, drafts, schedules, and content approval workflows. Only users with proper authority under system configuration may approve or take related actions.</p>
+      <h3>4. Account Management</h3>
+      <p>Accounts may be created, suspended, modified, or terminated by the authorized administrative unit based on operational needs. Users do not have a self-service account deletion mechanism.</p>
+      <h3>5. Limitation of Liability</h3>
+      <p>The operating authority is not liable for interruptions, delays, or failures arising from technical incidents, network infrastructure, external platforms beyond reasonable control, or unauthorized user conduct.</p>
+    </section>
+
+    <section class="card section" id="contact">
+      <h2>Liên hệ / Contact</h2>
+      <table class="table">
+        <tr><th>Đơn vị / Authority</th><td>Công an tỉnh Thanh Hóa / Thanh Hoa Department of Public Security</td></tr>
+        <tr><th>Địa chỉ / Address</th><td>15A Hạc Thành, phường Ba Đình, Thanh Hóa, Việt Nam / 15A Hac Thanh, Ba Dinh Ward, Thanh Hoa, Vietnam</td></tr>
+        <tr><th>Điện thoại / Phone</th><td>+84 237 3852697</td></tr>
+        <tr><th>Website</th><td>https://www.conganthanhhoa.gov.vn/</td></tr>
+        <tr><th>Email hỗ trợ / Support Email</th><td>daoduyanh.tin47@gmail.com</td></tr>
+        <tr><th>Kênh hỗ trợ / Support Channel</th><td>Fanpage Công an tỉnh Thanh Hóa</td></tr>
+        <tr><th>Thời gian hỗ trợ / Hours</th><td>24/7</td></tr>
+      </table>
+    </section>
+
+    <div class="footer">
+      © CAT Manager V2 • Thanh Hoa Department of Public Security
+    </div>
+  </div>
+</body>
+</html>
